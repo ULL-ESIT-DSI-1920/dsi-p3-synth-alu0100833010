@@ -35,6 +35,11 @@ const linkProfile = new Profile("Link", av3, {
     volume: 1
 });
 
+// Tipos de voces
+//speechSynthesis.getVoices() {
+
+//}
+
 const conversation = new Conversation(document.querySelector('#playchat'));
 
 const button = document.querySelector("button");
