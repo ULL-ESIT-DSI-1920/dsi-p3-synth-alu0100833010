@@ -1,22 +1,25 @@
 export default class Conversation { 
     // Trabajar y controlar las conversaciones de los personajes
-    constructor(box) { 
-        this.box = box;
+    constructor(playchat) { 
+        this.playchat = playchat;
     }
-    addMessage(chat) {
-        chat.map((cvt) => { 
+    addMessage(conversation) {
+        conversation.map((type) => { 
             const msg = new SpeechSynthesisUtterance();
-            msg.name = cvt.author.name;
-            msg.avatar = cvt.author.avatar;
-            msg.lang = cvt.author.lang;
-            msg.color = cvt.author.color;
-            msg.rate = cvt.author.rate;
-            msg.pitch = cvt.author.pitch;
-            msg.volume = cvt.author.volume;
-            msg.text = cvt.text;
+            msg.name = type.author.name;
+            msg.avatar = type.author.avatar;
+            msg.lang = type.author.lang;
+            msg.color = type.author.color;
+            msg.rate = type.author.rate;
+            msg.pitch = type.author.pitch;
+            msg.volume = type.author.volume;
+            msg.text = type.text;
+            //console.log(msg.avatar);
          
             msg.onstart = () => {
-                this.box.innerHTML += `<div class="cvt" style="color: ${cvt.author.color}">${cvt.author.name}: ${cvt.text}</div>`;
+                this.playchat.innerHTML += `<div class="" style="color: ${type.author.color}; display: flex; align-items: center">
+                <img src="${msg.avatar}" width=\"150px\" height=\"150px\"> &nbsp;
+                ${type.author.name} dice: ${type.text}</div>`;
             }
             speechSynthesis.speak(msg);                  
         });
