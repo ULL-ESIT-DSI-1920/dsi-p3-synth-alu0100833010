@@ -103,7 +103,7 @@ Para publicar nuestro proyecto en **gh-pages**, ejecutamos los siguientes comand
 ```
 $ npx parcel build src/index.html --no-minify
 $ npx parcel build src/index.html --no-source-maps --detailed-report
-$ npx parcel build src/index.html --public-url /dsi-p2-jspotify-alu0100833010/ -d build
+$ npx parcel build src/index.html --public-url /dsi-p3-synth-alu0100833010/ -d build
 $ npx gh-pages -d build
 ```
 ![Captura7](src/assets/captures/cap7.png)
