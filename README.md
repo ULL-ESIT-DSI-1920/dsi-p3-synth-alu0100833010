@@ -65,18 +65,15 @@ creando la estructura del proyecto .
   
   Tras esto, la estructura final del proyecto quedaría:
   
-  ![Captura1](src/assets/captures/cap1.png)
+  ![Captura1](src/assets/captures/cap5.png)
   
-### 2. Carpeta _Assets_.
+### 2. Clase _Profile_.
 
-Busca varias canciones en formato MP3 y guárdalas en la carpeta assets. Haz lo mismo con varias imágenes para las carátulas de los
-vinilos.
+La clase **Profile** guarda las características del personaje, donde se pueden encontrar cosas como la velocidad de diálogo, el avatar del personaje o el color del texto.
 
- ![Captura2](src/assets/captures/cap2.png)
+ ![Captura2](src/assets/captures/cap1.png)
  
-Para añadir las imágenes se ha usado la propiedad `background-image` desde CSS:
 
- ![Captura3](src/assets/captures/cap3.png)
  
 
  
