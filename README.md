@@ -67,17 +67,37 @@ creando la estructura del proyecto .
   
   ![Captura1](src/assets/captures/cap5.png)
   
-### 2. Clase _Profile_.
+### 2. Código _Javascript_.
+
+Utilizando módulos de Javascript, creamos dos clases **Profile** y **Conversation**:
+
+![Captura6](src/assets/captures/cap6.png)
+
+* `Profile.js`:
 
 La clase **Profile** guarda las características del personaje, donde se pueden encontrar cosas como la velocidad de diálogo, el avatar del personaje o el color del texto.
 
- ![Captura2](src/assets/captures/cap1.png)
- 
+![Captura2](src/assets/captures/cap1.png)
 
- 
+* `Conversation.js`:
 
+La clase **Conversation** trabaja y controla conversaciones de todos los personajes. 
  
-### 5. Publicación en _gh-pages_.
+![Captura3](src/assets/captures/cap2.png)
+
+La función `addMessage()` se encarga de asignar las características que tendrá cada mensaje del chat así como el texto que se va a reproducir. Por último, las inyectamos como código _HTML_ indicando cómo debe aparecer el mensaje, por ejemplo, el color del texto asignado según cada personaje, el avatar, el nombre, etc. 
+
+* `index.js`:
+
+![Captura4](src/assets/captures/cap3.png)
+ 
+Instanciamos los objetos de tipo **Profile** con las características que tendrá cada uno de los perfiles de los personajes. 
+
+![Captura5](src/assets/captures/cap4.png)
+
+Para generar el chat, creamos un botón que al clickar sobre él, muestre el cuadro de diálogo y llamamos a la función `addMessage()` y le indicamos el texto a reproducir y el perfil del personaje.
+
+### 3. Publicación en _gh-pages_.
  
 Para publicar nuestro proyecto en **gh-pages**, ejecutamos los siguientes comandos:
 ```
@@ -86,6 +106,6 @@ $ npx parcel build src/index.html --no-source-maps --detailed-report
 $ npx parcel build src/index.html --public-url /dsi-p2-jspotify-alu0100833010/ -d build
 $ npx gh-pages -d build
 ```
-![Captura9](src/assets/captures/cap9.png)
+![Captura7](src/assets/captures/cap7.png)
 
-Enlace:  https://ull-esit-dsi-1920.github.io/dsi-p2-jspotify-alu0100833010/
+Enlace:  https://ull-esit-dsi-1920.github.io/dsi-p3-synth-alu0100833010/
